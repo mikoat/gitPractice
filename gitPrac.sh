@@ -1,9 +1,7 @@
 #!/bin/zsh
 
-# Check if the Pages directory exists
 CHECK_FOLDER=$(ls | grep -w Pages)
 
-# Define the HTML content with the current date and time
 CONTENT="<!DOCTYPE html>
 <html lang=\"en\">
 <head>
@@ -16,7 +14,6 @@ CONTENT="<!DOCTYPE html>
 </body>
 </html>"
 
-# If the Pages directory exists
 if [ "$CHECK_FOLDER" = "Pages" ]; then
     cd "$CHECK_FOLDER"
     echo "$CONTENT" > "index.html"
