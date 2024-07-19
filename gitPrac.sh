@@ -14,8 +14,6 @@ CONTENT="<!DOCTYPE html>
 </body>
 </html>"
 
-#!/bin/bash
-
 if [ "$CHECK_FOLDER" = "Pages" ]; then
     cd "$CHECK_FOLDER"
     echo "$CONTENT" > "index.html"
