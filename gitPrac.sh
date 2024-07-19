@@ -20,14 +20,14 @@ if [ "$CHECK_FOLDER" = "Pages" ]; then
     cd "$CHECK_FOLDER"
     echo "$CONTENT" > "index.html"
     git add .
-    gcom "File created"
-    gps
+    git commit -m "File updated"
+    git push
 else
     mkdir "Pages"
     cd "Pages"
     touch "index.html"
     echo "$CONTENT" > "index.html"
     git add .
-    gcom "File created"
-    gps
+    git commit -m "File created"
+    git push
 fi
