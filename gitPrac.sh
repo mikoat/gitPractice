@@ -18,14 +18,13 @@ CONTENT="<!DOCTYPE html>
 
 if [ "$CHECK_FOLDER" = "Pages" ]; then
     cd "$CHECK_FOLDER"
-    touch "index.html"
     echo "$CONTENT" > "index.html"
     git add .
     gcom "File created"
     gps
 else
-    git clone https://github.com/mikiyasalehegn/gitPractice.git
-    cd "$CHECK_FOLDER"
+    mkdir "Pages"
+    cd "Pages"
     touch "index.html"
     echo "$CONTENT" > "index.html"
     git add .
